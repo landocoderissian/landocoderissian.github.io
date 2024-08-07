@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Best Practices &mdash; Your Project Name  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7bb85b03" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/custom.js?v=c1512087"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Custom Characters" href="Custom%20Characters.html" />
+    <link rel="prev" title="Hair" href="Hair.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: green" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Your Project Name
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#licensing">Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="History.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="History.html#digital-humans">Digital Humans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#open-source-digital-humans">Open Source Digital Humans</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Creating%20A%20Character.html">Creating A Character</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Creating%20A%20Character.html#base">Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Creating%20A%20Character.html#morphing">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Creating%20A%20Character.html#finalization">Finalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Creating%20A%20Character.html#introduction-to-alt-topo">Introduction to Alt-Topo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Creating%20A%20Character.html#using-alt-topo">Using Alt-Topo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Hair.html">Hair</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#mb-lab">MB-Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#antonia">Antonia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#reom">Reom</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Best Practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-export">Import/Export</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eevee-real-time-rendering">Eevee &amp; Real Time Rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cycles-offline-rendering">Cycles &amp; Offline Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Custom%20Characters.html">Custom Characters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#notice">NOTICE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#the-base">The Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#the-barebasics-of-prepping">The Barebasics of Prepping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#configuration-1">Configuration (1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#configuration-2">Configuration (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#morphs-1">Morphs (1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#morphs-2">Morphs (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#morphs-3">Morphs (3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#morphs-4">Morphs (4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#morphs-5">Morphs (5)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#char-blend-final-setup">char.blend &amp; final setup.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#initial-fixes">Initial Fixes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#rigging-1">Rigging (1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#rigging-2">Rigging (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#rigging-3">Rigging (3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#rigging-4">Rigging (4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#rigging-5">Rigging (5)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Custom%20Characters.html#finale">Finale</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Character%20editing.html">Character editing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Character%20editing.html#base">Base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Character%20editing.html#structure">Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Character%20editing.html#morphs">Morphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Character%20editing.html#rigging">Rigging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Character%20editing.html#config">Config</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: green" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Your Project Name</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Best Practices</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Best Practices.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="best-practices">
+<h1>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h1>
+<section id="import-export">
+<h2>Import/Export<a class="headerlink" href="#import-export" title="Link to this heading"></a></h2>
+<p>You might not like how the character you’ve created,
+But maybe you really like other parts of it, such as the jaw and lips.
+You can iterate on the same character indefinitely if you use the export morphs option.
+Once you’re ready to finalize your character you can use the <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">morphs</span></code> option, and it will create a YAML file that will contain all the options you’ve set and can be loaded in at any time.
+This allows for easy collaboration and improving the same character by tweaking values after everything is done.</p>
+</section>
+<section id="eevee-real-time-rendering">
+<h2>Eevee &amp; Real Time Rendering<a class="headerlink" href="#eevee-real-time-rendering" title="Link to this heading"></a></h2>
+<p>In Eevee, Most Characters will require Ray Tracing to work properly due to the fact they use a Refraction Based Glass Shader.</p>
+</section>
+<section id="cycles-offline-rendering">
+<h2>Cycles &amp; Offline Rendering<a class="headerlink" href="#cycles-offline-rendering" title="Link to this heading"></a></h2>
+<p>For Offline Renderers such as Cycles, Low polycount meshes like Reom can cause issues with the shading. It is advised to use the Subdivision Surface modifier, in order to create a more convincing image.</p>
+<a class="reference internal image-reference" href="images/ReomSubD0.png"><img alt="Reom at Subdiv 0" src="images/ReomSubD0.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 0, Nobody is going to be convinced by this mesh.</p>
+<a class="reference internal image-reference" href="images/ReomSubD1.png"><img alt="Reom at Subdiv 1" src="images/ReomSubD1.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 1, It has signficantly improved however, there are still some obvious shading issues on the neck and forehead.</p>
+<a class="reference internal image-reference" href="images/ReomSubD2.png"><img alt="Reom at Subdiv 2" src="images/ReomSubD2.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 2, There are now less obvious issues but a keen eye can still notice the forehead and chin.</p>
+<a class="reference internal image-reference" href="images/ReomSubD3.png"><img alt="Reom at Subdiv 3" src="images/ReomSubD3.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 3, There are little to no shading issues and everything is working as intended.
+Note the increased polycount and RAM usage when increasing subdivison level, one must weigh marginal increases in fidelity with exponential increases in rendering costs.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Hair.html" class="btn btn-neutral float-left" title="Hair" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Custom%20Characters.html" class="btn btn-neutral float-right" title="Custom Characters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Your Name.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
