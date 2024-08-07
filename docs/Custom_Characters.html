@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Characters &mdash; Your Project Name  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7bb85b03" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/custom.js?v=5dbb1cf8"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: green" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Your Project Name
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#licensing">Licensing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="History.html">History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="History.html#digital-humans">Digital Humans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="History.html#open-source-digital-humans">Open Source Digital Humans</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Hair.html">Hair</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#mb-lab">MB-Lab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#antonia">Antonia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#reom">Reom</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: green" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Your Project Name</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Custom Characters</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Custom_Characters.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="custom-characters">
+<h1>Custom Characters<a class="headerlink" href="#custom-characters" title="Link to this heading"></a></h1>
+<section id="notice">
+<h2>NOTICE<a class="headerlink" href="#notice" title="Link to this heading"></a></h2>
+<p>This tutorial is about the technical side of Charmorph, if you wish to learn about Creating a Characters included in Charmorph, see: <a class="reference external" href="https://charmorph-docs.readthedocs.io/en/main/Creating%20A%20Character.html">Creating A Character</a> . Also plese note that this tutorial is not an exhaustive list of Charmorph’s Features. Plese check <a class="reference external" href="https://charmorph-docs.readthedocs.io/en/main/Character%20editing.html">Character editing</a> for a more detailed and technical list.
+For Reference We are using the latest commit as of 11:29 PM  February 4th 2024 with Blender 4.0.2 on Windows 11</p>
+<p>The example in this tutorial will be availble <a class="reference external" href="https://github.com/Hopefullyidontgetbanned/CharmorphExampleHuman">Here</a></p>
+</section>
+<section id="the-base">
+<h2>The Base<a class="headerlink" href="#the-base" title="Link to this heading"></a></h2>
+<p>You as an artist will likely have a pre-existing character that you wish to create into a charmorph character, However for this tutorial we will use Blender’s Human Base Meshes, and delete every object that isn’t the body.
+Note that this is just to keep the tutorial as simple as possible.</p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(1).png"><img alt="Image of Einar from Blender Studio's Human Base meshes without Eyes with Multires modifier" src="images/characterfromscratch_images/(1).png" style="width: 720px;" /></a>
+</section>
+<section id="the-barebasics-of-prepping">
+<h2>The Barebasics of Prepping<a class="headerlink" href="#the-barebasics-of-prepping" title="Link to this heading"></a></h2>
+<p>Every character needs to be stripped down to the bare basics, then be built up again seperately, We can call this process ‘prepping your character’. So we will apply the modifiers and rename it to <code class="docutils literal notranslate"><span class="pre">ExampleHuman</span></code></p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(2).png"><img alt="Image of Einar from Blender Studio's Human Base meshes without Eyes, Modifiers now applied and renamed." src="images/characterfromscratch_images/(2).png" style="width: 720px;" /></a>
+</section>
+<section id="configuration-1">
+<h2>Configuration (1)<a class="headerlink" href="#configuration-1" title="Link to this heading"></a></h2>
+<p>Characters need to be configured in order for the add-on to recognize it, Lets’ create a folder in the add-on folder we will work in. for Windows users that is <code class="docutils literal notranslate"><span class="pre">%APPDATA%\Blender</span> <span class="pre">Foundation\Blender\4.0\scripts\addons\CharMorph-master\data\characters</span></code>.
+Once navigated to the <code class="docutils literal notranslate"><span class="pre">characters</span></code> folder in your add-on directory, you will create a folder for your character, Lets’ call it <code class="docutils literal notranslate"><span class="pre">ExampleHuman</span></code>.
+Within that folder we will create a file named config.yaml</p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(3).png"><img alt="Image of Windows Explorer with a folder open with config.yaml" src="images/characterfromscratch_images/(3).png" style="width: 720px;" /></a>
+</section>
+<section id="configuration-2">
+<h2>Configuration (2)<a class="headerlink" href="#configuration-2" title="Link to this heading"></a></h2>
+<p>Open the newly created config file and set the parameters accordingly for our project we will go like this</p>
+<dl class="field-list simple">
+<dt class="field-odd">title<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is what the User will see in the add-on drop-down menu</p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>when selected will shown who created the character</p>
+</dd>
+<dt class="field-odd">additional_authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(Optional) Shows who else worked on the character, not shown in add-on</p>
+</dd>
+<dt class="field-even">License<span class="colon">:</span></dt>
+<dd class="field-even"><p>Select your license, Preferably something that can fit within the Blender N-panel length.</p>
+</dd>
+<dt class="field-odd">char_obj<span class="colon">:</span></dt>
+<dd class="field-odd"><p>what object in the reference blend file will be selected to be created.</p>
+</dd>
+<dt class="field-even">basis<span class="colon">:</span></dt>
+<dd class="field-even"><p>What is the name of the default reference shapekey the character will have, remember that the character won’t shapekeys stored in the blend file.</p>
+</dd>
+<dt class="field-odd">custom_morph_order<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Whether or not the morphs are listed by their defaults in their L2 Config file or by other methods such as alphabetical order,</p>
+</dd>
+<dt class="field-even">recurse_materials<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether or not to use materials externally listed, because we don’t have materials we shouldn’t worry about it.</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(4).png"><img alt="Image of Notepad++ with a config file open" src="images/characterfromscratch_images/(4).png" style="width: 720px;" /></a>
+</section>
+<section id="morphs-1">
+<h2>Morphs (1)<a class="headerlink" href="#morphs-1" title="Link to this heading"></a></h2>
+<p>Create a folder in the character folder called <code class="docutils literal notranslate"><span class="pre">morphs</span></code></p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(5).png"><img alt="Image of Windows Explorer with a new folder in the character folder named morphs" src="images/characterfromscratch_images/(5).png" style="width: 720px;" /></a>
+<p>Then create a folder named <code class="docutils literal notranslate"><span class="pre">L1</span></code></p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(6).png"><img alt="Image of Windows Explorer with a new folder in the morphs folder named L1" src="images/characterfromscratch_images/(6).png" style="width: 720px;" /></a>
+</section>
+<section id="morphs-2">
+<h2>Morphs (2)<a class="headerlink" href="#morphs-2" title="Link to this heading"></a></h2>
+<p>Now back to the Blend file, we want to create a basis shapekey called <code class="docutils literal notranslate"><span class="pre">Default</span></code></p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(7).png"><img alt="Image of the character with a Default shapekey" src="images/characterfromscratch_images/(7).png" style="width: 720px;" /></a>
+<p>Then Open the <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">L1</span> <span class="pre">Morph</span></code> menu, it’s located in the <code class="docutils literal notranslate"><span class="pre">character</span> <span class="pre">editing</span></code> tab
+Navigate to the newly created L1 folder and export. You will notice the ability to change precision, I suggest leaving it at 32bit unless you have either vey dense meshes or meshes with a lot of close vertices.</p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(8).png"><img alt="Image of Blender with Export L1 Morph Menu Open" src="images/characterfromscratch_images/(8).png" style="width: 720px;" /></a>
+</section>
+<section id="morphs-3">
+<h2>Morphs (3)<a class="headerlink" href="#morphs-3" title="Link to this heading"></a></h2>
+<p>Back to explorer, we will be making a folder named <code class="docutils literal notranslate"><span class="pre">L2</span></code> which will contain all our user exposed morphs.</p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(9).png"><img alt="Image of Windows Explorer with a new folder in the morphs folder named L2" src="images/characterfromscratch_images/(9).png" style="width: 720px;" /></a>
+</section>
+<section id="morphs-4">
+<h2>Morphs (4)<a class="headerlink" href="#morphs-4" title="Link to this heading"></a></h2>
+<p>We will continue by making said user exposed morphs this will include a morph for the ears and jowls, for this tutorial we will just call them <code class="docutils literal notranslate"><span class="pre">Example_1</span></code> and <code class="docutils literal notranslate"><span class="pre">Example_2</span></code>
+This workflow is essentially identical to how you would make shapekeys in Blender except we will export them out later.</p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(10).png"><img alt="Image of Blender Sculpting mode with Shapekey as active sculpt." src="images/characterfromscratch_images/(10).png" style="width: 720px;" /></a>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(11).png"><img alt="Shapekey in Sculptmode showing elongated ears." src="images/characterfromscratch_images/(11).png" style="width: 720px;" /></a>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(12).png"><img alt="Shapekey in Sculptmode showing drooping jowls." src="images/characterfromscratch_images/(12).png" style="width: 720px;" /></a>
+</section>
+<section id="morphs-5">
+<h2>Morphs (5)<a class="headerlink" href="#morphs-5" title="Link to this heading"></a></h2>
+<p>Once Satisfied with your morphs, navigate to the <code class="docutils literal notranslate"><span class="pre">character</span> <span class="pre">editing</span></code> menu again, and select <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">morphs</span></code>. Remove any inappropriate regex (usually i just remove all regex to keep things simple). And export it into your <code class="docutils literal notranslate"><span class="pre">L2</span></code> folder, Remember to keep your precision consistent!</p>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(13).png"><img alt="Image of the Export morphs menu without any regex." src="images/characterfromscratch_images/(13).png" style="width: 720px;" /></a>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(14).png"><img alt="Image of Windows Explorer with the exported morphs." src="images/characterfromscratch_images/(14).png" style="width: 720px;" /></a>
+<p>Then afterwards select <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">Morphs</span> <span class="pre">list</span></code> and export it in your <code class="docutils literal notranslate"><span class="pre">L2</span></code> folder.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(15).png"><img alt="Image of Export Morphs list menu" src="images/characterfromscratch_images/(15).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+<section id="char-blend-final-setup">
+<h2>char.blend &amp; final setup.<a class="headerlink" href="#char-blend-final-setup" title="Link to this heading"></a></h2>
+<p>Once you have created &amp; exported your morphs, delete all your modifiers and shapekeys, and navigate to the base of your character folder and save the blend file as <code class="docutils literal notranslate"><span class="pre">char.blend.</span></code> This will be used by the add-on to pull data like materials if you have them and other data not externally stored.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(16).png"><img alt="Image of the Character without any modifiers or shapekeys" src="images/characterfromscratch_images/(16).png" style="width: 720px;" /></a>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(17).png"><img alt="Image of the Blender Save as Dialogue" src="images/characterfromscratch_images/(17).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>if everything goes to plan, the base of your character folder should look like this.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(18).png"><img alt="Image of Windows explorer showing the base of the character folder." src="images/characterfromscratch_images/(18).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+<section id="initial-fixes">
+<h2>Initial Fixes<a class="headerlink" href="#initial-fixes" title="Link to this heading"></a></h2>
+<p>If you found any issues with loading your new character in charmorph you might find that your issues likely lie in the way you setup the config file. Usually a wrong indent or other syntax error can cause this</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(19).png"><img alt="Image of Notepad++ showing changes to the config.yaml file." src="images/characterfromscratch_images/(19).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+<section id="rigging-1">
+<h2>Rigging (1)<a class="headerlink" href="#rigging-1" title="Link to this heading"></a></h2>
+<p>The appeal of a character creator for more skilled artists is the ability to practically skip the rigging process entirely. This is a bit more complicated in charmorph but we will keep it simple and basic.
+For this tutorial lets just use mixamo to keep things absolutely simple. I will assume you know how to use mixamo and keep things brief. You need to rig around the base of the character not with any morphs.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(20).png"><img alt="Image of a blank ExampleHuman mesh" src="images/characterfromscratch_images/(20).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Lets export our blank human.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(21).png"><img alt="Image of Blender's FBX Export menu." src="images/characterfromscratch_images/(21).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Now go to Mixamo and go through the process of uploading and rigging your character.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(22).png"><img alt="Image of Mixamo's rigging menu with no markers." src="images/characterfromscratch_images/(22).png" style="width: 720px;" /></a>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(23).png"><img alt="Image of Mixamo's rigging menu with markers." src="images/characterfromscratch_images/(23).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Then download the character in it’s original pose with no animations.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(24).png"><img alt="Image of Mixamo's Download menu" src="images/characterfromscratch_images/(24).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+<section id="rigging-2">
+<h2>Rigging (2)<a class="headerlink" href="#rigging-2" title="Link to this heading"></a></h2>
+<p>We have now created a basic skeletal rig, however now we need to actually automate it for charmorph to do our work for us.
+Import your mixamo rig.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(25).png"><img alt="Image of Blender's FBX import menu" src="images/characterfromscratch_images/(25).png" style="width: 720px;" /></a>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(26).png"><img alt="Image of the imported mesh and skeleton in Blender's viewport." src="images/characterfromscratch_images/(26).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>We now have the character, lets save our rig. Save it as <code class="docutils literal notranslate"><span class="pre">rigs.blend</span></code></p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(27).png"><img alt="Image of Blender's save file menu" src="images/characterfromscratch_images/(27).png" style="width: 720px;" /></a>
+</div></blockquote>
+<dl>
+<dt>Now that we have everything saved, we need matching transforms with that of our actual mesh. Which should be around <code class="docutils literal notranslate"><span class="pre">1.8m</span></code> tall, let’s apply transforms to the rig and mesh until the rig is around <code class="docutils literal notranslate"><span class="pre">1.8m</span></code>. We can reach the apply transforms menu with <code class="docutils literal notranslate"><span class="pre">Control+A</span></code></dt><dd><a class="reference internal image-reference" href="images/characterfromscratch_images/(28).png"><img alt="Image of Blender's apply transform menu." src="images/characterfromscratch_images/(28).png" style="width: 720px;" /></a>
+</dd>
+</dl>
+</section>
+<section id="rigging-3">
+<h2>Rigging (3)<a class="headerlink" href="#rigging-3" title="Link to this heading"></a></h2>
+<p>Onward to actually putting this rig into charmorph.
+Go to <code class="docutils literal notranslate"><span class="pre">character</span> <span class="pre">editing</span></code> and underneath <code class="docutils literal notranslate"><span class="pre">rigging</span></code> select your character object in the <code class="docutils literal notranslate"><span class="pre">char</span></code> box</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(29).png"><img alt="Image of Charmorph's rigging menu." src="images/characterfromscratch_images/(29).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Now to the most difficult part, joint locations.
+Charmorph fits rigs to character proportions, for example a baby morph will make the character significantly smaller but will fit the rig to the baby, avoiding issues of scale.
+However this means that every bone needs to have it’s position stored in vertex groups to determine locations.</p>
+<p>For now we will delete all outer <code class="docutils literal notranslate"><span class="pre">_End</span></code> bones generated by mixamo, this will create problems in the future but will save us the headache of calculating them.</p>
+<p>For now let us navigate to <code class="docutils literal notranslate"><span class="pre">Joint</span> <span class="pre">VG</span> <span class="pre">Calculation</span></code> and go to the <code class="docutils literal notranslate"><span class="pre">recalc</span> <span class="pre">mode</span></code> drop down menu and select <code class="docutils literal notranslate"><span class="pre">raycast</span> <span class="pre">bone</span> <span class="pre">axis</span></code>
+Select all bones inside the mesh and then click Recalc vertex groups.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(30).png"><img alt="Image of Charmorph's joint vg recalculation menu." src="images/characterfromscratch_images/(30).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>You will likely find one or two errors, if a bone is sticking out just a little bit, you can nudge it in. and that should solve things.
+The rest you can use other methods or delete them outright.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(31).png"><img alt="Image of Charmorph's recalc vertex groups button." src="images/characterfromscratch_images/(31).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+<section id="rigging-4">
+<h2>Rigging (4)<a class="headerlink" href="#rigging-4" title="Link to this heading"></a></h2>
+<p>Now, create two folders in your character folder: <code class="docutils literal notranslate"><span class="pre">joints</span></code> and <code class="docutils literal notranslate"><span class="pre">weights</span></code></p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(32).png"><img alt="Image of Windows Explorer, with joints and weights folders created in the character folder." src="images/characterfromscratch_images/(32).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Back to Blender, Select your mesh, navigate to <code class="docutils literal notranslate"><span class="pre">character</span> <span class="pre">editing</span></code> then go to the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">I/O</span></code> drop down tab and select <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">VGs</span></code>.
+Navigate to your newly created <code class="docutils literal notranslate"><span class="pre">weights</span></code> folder and export with the <code class="docutils literal notranslate"><span class="pre">VG</span> <span class="pre">Regex</span></code> of <code class="docutils literal notranslate"><span class="pre">^mixamorig:</span></code></p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(33).png"><img alt="Image of Blender with the export vgs menu open with regex." src="images/characterfromscratch_images/(33).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Now we will do the same with joints, <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">VGs</span></code> and navigate to the <code class="docutils literal notranslate"><span class="pre">joints</span></code> folder. we will use the <code class="docutils literal notranslate"><span class="pre">VG</span> <span class="pre">Regex</span></code> of <code class="docutils literal notranslate"><span class="pre">^Joint_</span></code></p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(34).png"><img alt="Image of Blender with the export vgs menu open with different regex." src="images/characterfromscratch_images/(34).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+<section id="rigging-5">
+<h2>Rigging (5)<a class="headerlink" href="#rigging-5" title="Link to this heading"></a></h2>
+<p>Now we can clean up the <code class="docutils literal notranslate"><span class="pre">rigs.blend</span></code> file, delete the mesh and rename the skeleton Mixamo. This will be what it will be called once imported.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(35).png"><img alt="Image of Blender with a renamed armature." src="images/characterfromscratch_images/(35).png" style="width: 720px;" /></a>
+</div></blockquote>
+<p>Now we have to add the rig to our <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file</p>
+<dl class="field-list simple">
+<dt class="field-odd">armature_defaults<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is will define the defaults that charmorph will choose.</p>
+</dd>
+<dt class="field-even">type<span class="colon">:</span></dt>
+<dd class="field-even"><p>this is the type of armature, most common is <code class="docutils literal notranslate"><span class="pre">regular</span></code> for deform skeletons with no generated rig controls. and <code class="docutils literal notranslate"><span class="pre">rigify</span></code> for rigify generated rigs.</p>
+</dd>
+<dt class="field-odd">file<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gives relative location to where the rig is stored.</p>
+</dd>
+<dt class="field-even">title<span class="colon">:</span></dt>
+<dd class="field-even"><p>This is what the User will see in the add-on drop-down menu for potential rig types</p>
+</dd>
+<dt class="field-odd">type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>rifiy,regular,arp are availble</p>
+</dd>
+<dt class="field-even">file<span class="colon">:</span></dt>
+<dd class="field-even"><p>relative location of rig file.</p>
+</dd>
+<dt class="field-odd">obj_name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gives the name of the rig object</p>
+</dd>
+<dt class="field-even">weights<span class="colon">:</span></dt>
+<dd class="field-even"><p>gives the relative location of the weights file</p>
+</dd>
+<dt class="field-odd">joints<span class="colon">:</span></dt>
+<dd class="field-odd"><p>gives the relative location of the joints file.</p>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="images/characterfromscratch_images/(36).png"><img alt="Image of Notepad++ with new parameters" src="images/characterfromscratch_images/(36).png" style="width: 720px;" /></a>
+</section>
+<section id="finale">
+<h2>Finale<a class="headerlink" href="#finale" title="Link to this heading"></a></h2>
+<p>Now that everything is said and done you will more or less have a charmorph character available for your own purposes!.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="images/characterfromscratch_images/(37).png"><img alt="Image of a Blender viewport with multiple parameters exposed, congrats!." src="images/characterfromscratch_images/(37).png" style="width: 720px;" /></a>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 1980, Your Name.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

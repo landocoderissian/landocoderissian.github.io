@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; Your Project Name  documentation</title>
+  <title>Best Practices &mdash; Your Project Name  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7bb85b03" />
@@ -22,9 +22,7 @@
         <script src="_static/custom.js?v=5dbb1cf8"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="History" href="History.html" />
-    <link rel="prev" title="Welcome to Charmorph’s documentation!" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,10 +44,10 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#licensing">Licensing</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Introduction.html#licensing">Licensing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="History.html">History</a><ul>
@@ -79,9 +77,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">Best Practices</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/Introduction.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Best_Practices.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -89,44 +87,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
-<section id="installation">
-<span id="id1"></span><h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
-<p>To Install Charmorph, you have two Options
-Cloning Using Git CLI or Download them on <a class="reference external" href="https://github.com/Upliner/CharMorph/releases/">Releases</a></p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/Upliner/CharMorph --recursive</span>
-</pre></div>
-</div>
+  <section id="best-practices">
+<h1>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h1>
+<section id="import-export">
+<h2>Import/Export<a class="headerlink" href="#import-export" title="Link to this heading"></a></h2>
+<p>You might not like how the character you’ve created,
+But maybe you really like other parts of it, such as the jaw and lips.
+You can iterate on the same character indefinitely if you use the export morphs option.
+Once you’re ready to finalize your character you can use the <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">morphs</span></code> option, and it will create a YAML file that will contain all the options you’ve set and can be loaded in at any time.
+This allows for easy collaboration and improving the same character by tweaking values after everything is done.</p>
 </section>
-<section id="licensing">
-<h2>Licensing<a class="headerlink" href="#licensing" title="Link to this heading"></a></h2>
-<dl class="simple">
-<dt>Charmorph’s Code is licensed under GPL in accordance with Blender’s <a class="reference external" href="https://www.blender.org/about/license//">License</a></dt><dd><p>Content however is subject to their original Authors</p>
-</dd>
-</dl>
-<p>Character Licensing Chart:</p>
-<dl class="field-list simple">
-<dt class="field-odd">Antonia<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Creative Commons Attribution</p>
-</dd>
-<dt class="field-even">MB-Lab<span class="colon">:</span></dt>
-<dd class="field-even"><p>GNU Affero General Public License</p>
-</dd>
-<dt class="field-odd">Reom<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Creative Commons Attribution</p>
-</dd>
-</dl>
+<section id="eevee-real-time-rendering">
+<h2>Eevee &amp; Real Time Rendering<a class="headerlink" href="#eevee-real-time-rendering" title="Link to this heading"></a></h2>
+<p>In Eevee, Most Characters will require Ray Tracing to work properly due to the fact they use a Refraction Based Glass Shader.</p>
+</section>
+<section id="cycles-offline-rendering">
+<h2>Cycles &amp; Offline Rendering<a class="headerlink" href="#cycles-offline-rendering" title="Link to this heading"></a></h2>
+<p>For Offline Renderers such as Cycles, Low polycount meshes like Reom can cause issues with the shading. It is advised to use the Subdivision Surface modifier, in order to create a more convincing image.</p>
+<a class="reference internal image-reference" href="images/ReomSubD0.png"><img alt="Reom at Subdiv 0" src="images/ReomSubD0.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 0, Nobody is going to be convinced by this mesh.</p>
+<a class="reference internal image-reference" href="images/ReomSubD1.png"><img alt="Reom at Subdiv 1" src="images/ReomSubD1.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 1, It has signficantly improved however, there are still some obvious shading issues on the neck and forehead.</p>
+<a class="reference internal image-reference" href="images/ReomSubD2.png"><img alt="Reom at Subdiv 2" src="images/ReomSubD2.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 2, There are now less obvious issues but a keen eye can still notice the forehead and chin.</p>
+<a class="reference internal image-reference" href="images/ReomSubD3.png"><img alt="Reom at Subdiv 3" src="images/ReomSubD3.png" style="width: 480px;" /></a>
+<p>Reom at Subdivision Level 3, There are little to no shading issues and everything is working as intended.
+Note the increased polycount and RAM usage when increasing subdivison level, one must weigh marginal increases in fidelity with exponential increases in rendering costs.</p>
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Charmorph’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="History.html" class="btn btn-neutral float-right" title="History" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

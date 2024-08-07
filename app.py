@@ -1,15 +1,17 @@
 import os
 import tempfile
 import subprocess
+import shutil
 import requests
 from flask import Flask, send_from_directory, jsonify
 
 app = Flask(__name__)
 
 # Define global variables for GitHub repo
-OWNER = 'Hopefullyidontgetbanned' 
+OWNER = 'Hopefullyidontgetbanned'
 REPO = 'CharMorph_Docs'
 HTML_DIR = 'docs'
+EXISTING_CONF_PY = './docs/conf.py'  # Path to your existing conf.py
 
 def fetch_repo_contents(owner, repo, path=""):
     url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
@@ -23,27 +25,21 @@ def download_file(url):
     return response.content.decode('utf-8')
 
 def build_html(rst_files):
+    # Ensure sphinx_rtd_theme is installed
+    subprocess.run(['pip', 'install', 'sphinx_rtd_theme'], check=True)
+
     # Create a temporary directory
     with tempfile.TemporaryDirectory() as temp_dir:
-        # Write .rst files to the temporary directory
+        # Write .rst files to the temporary directory with underscores instead of spaces
         for file_name, file_content in rst_files.items():
-            file_path = os.path.join(temp_dir, file_name)
+            sanitized_file_name = file_name.replace(' ', '_')
+            file_path = os.path.join(temp_dir, sanitized_file_name)
             os.makedirs(os.path.dirname(file_path), exist_ok=True)
             with open(file_path, 'w') as file:
                 file.write(file_content)
 
-        # Create a minimal conf.py for Sphinx
-        conf_content = """
-project = 'GitHub RST to HTML'
-extensions = []
-templates_path = ['_templates']
-exclude_patterns = []
-html_theme = 'alabaster'
-html_static_path = ['_static']
-"""
-        conf_path = os.path.join(temp_dir, 'conf.py')
-        with open(conf_path, 'w') as conf_file:
-            conf_file.write(conf_content)
+        # Copy the existing conf.py to the temporary directory
+        shutil.copy(EXISTING_CONF_PY, temp_dir)
 
         # Ensure the output directory exists
         os.makedirs(HTML_DIR, exist_ok=True)
