@@ -32,7 +32,7 @@ def build_html(rst_files):
     with tempfile.TemporaryDirectory() as temp_dir:
         # Write .rst files to the temporary directory with underscores instead of spaces
         for file_name, file_content in rst_files.items():
-            sanitized_file_name = file_name.replace(' ', '_')
+            sanitized_file_name = file_name.replace('_', ' ')
             file_path = os.path.join(temp_dir, sanitized_file_name)
             os.makedirs(os.path.dirname(file_path), exist_ok=True)
             with open(file_path, 'w') as file:
