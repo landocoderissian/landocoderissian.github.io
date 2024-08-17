@@ -2,9 +2,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Your Project Name'
-author = 'Your Name'
-copyright = '2024, Your Name'
+project = 'CharMorph'
+author = 'Hopefullyidontgetbanned'
+copyright = '2024, Upliner'
 
 # -- General configuration ---------------------------------------------------
 
