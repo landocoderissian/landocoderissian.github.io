@@ -5,7 +5,7 @@ Custom Characters
 
 NOTICE
 ------------
-This tutorial is about the technical side of Charmorph, if you wish to learn about Creating a Characters included in Charmorph, see: `Creating A Character <https://charmorph-docs.readthedocs.io/en/main/Creating%20A%20Character.html>`_ . Also plese note that this tutorial is not an exhaustive list of Charmorph's Features. Plese check `Character editing <https://charmorph-docs.readthedocs.io/en/main/Character%20editing.html>`_ for a more detailed and technical list.
+This tutorial is about the technical side of Charmorph, if you wish to learn about Creating a Characters included in Charmorph, see: :doc:`Creating A Character` . Also plese note that this tutorial is not an exhaustive list of Charmorph's Features. Plese check :doc:`Character editing` for a more detailed and technical list.
 For Reference We are using the latest commit as of 11:29 PM  February 4th 2024 with Blender 4.0.2 on Windows 11
 
 The example in this tutorial will be availble `Here <https://github.com/Hopefullyidontgetbanned/CharmorphExampleHuman>`_
