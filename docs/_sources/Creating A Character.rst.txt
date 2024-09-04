@@ -8,9 +8,11 @@ Base
 Every Character starts with a Base, Be sure to choose carefully and consistently for your characters and projects.
 Here are the list of bases provided by default:
 
-:Antonia: Creative Commons Attribution
-:MB-Lab: GNU Affero General Public License
-:Reom: Creative Commons Attribution
+:Antonia: Creative Commons Attribution (`CC-BY <https://creativecommons.org/licenses/by/4.0/deed.en>`_)
+:MB-Lab: GNU Affero General Public License (`AGPL <https://www.gnu.org/licenses/agpl-3.0.en.html>`_)
+:Reom: Creative Commons Attribution (`CC-BY <https://creativecommons.org/licenses/by/4.0/deed.en>`_)
+:Vitruvian: Creative Commons Zero (`CC0 <https://creativecommons.org/public-domain/cc0/>`_)
+
 .. image:: images/BaseCharacter.png
   :width: 256
   :alt: Selecting a Base
