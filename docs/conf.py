@@ -20,7 +20,8 @@ exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
 
-html_theme = 'sphinx_rtd_theme'
+html_permalinks_icon = '<span>#</span>'
+html_theme = 'sphinxawesome_theme'
 
 html_theme_options = {
     'style_nav_header_background': 'green',  # Set the header background to green
