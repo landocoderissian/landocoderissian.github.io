@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Character editing &mdash; Your Project Name  documentation</title>
+  <title>Character editing &mdash; CharMorph  documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7bb85b03" />
@@ -35,7 +35,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            Your Project Name
+            CharMorph
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -68,6 +68,11 @@
 <li class="toctree-l2"><a class="reference internal" href="Hair.html#mb-lab">MB-Lab</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Hair.html#antonia">Antonia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Hair.html#reom">Reom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Hair.html#vitruvian">Vitruvian</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Hair.html#eyebrows">Eyebrows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Hair.html#hairstyles">Hairstyles</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Best%20Practices.html">Best Practices</a><ul>
@@ -101,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#base">Base</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#morphs">Morphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hair">Hair</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rigging">Rigging</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#config">Config</a></li>
 </ul>
@@ -113,7 +119,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: green" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Your Project Name</a>
+          <a href="index.html">CharMorph</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -133,6 +139,7 @@
              
   <section id="character-editing">
 <h1>Character editing<a class="headerlink" href="#character-editing" title="Link to this heading"></a></h1>
+<p>This page is intended for developers and has a more exhaustive list of technical details than <a class="reference internal" href="Custom%20Characters.html"><span class="doc">Custom Characters</span></a></p>
 <section id="base">
 <h2>Base<a class="headerlink" href="#base" title="Link to this heading"></a></h2>
 <p>Apart from character creating CharMorph also has editing tools
@@ -210,6 +217,24 @@ Morphs are Created by exporting Shapekeys to external files instead of being sto
 or <code class="docutils literal notranslate"><span class="pre">Fantasy_No_Nose</span></code></p>
 <p>Charmorph also has a UI Seperator to help keep things in the same category organized and less confusing to look at</p>
 <p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">&quot;separator&quot;:</span> <span class="pre">true},</span></code></p>
+</section>
+<section id="hair">
+<h2>Hair<a class="headerlink" href="#hair" title="Link to this heading"></a></h2>
+<p>Currently Charmorph still uses Blender’s old particle System.</p>
+<p>Hair is stored in two locations, in a blend file where either a proxy mesh or intended character mesh will store hair systems and externally in the <code class="docutils literal notranslate"><span class="pre">hairstyles</span></code> folder for each character.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">Hair</span></code> or <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">All</span> <span class="pre">Hair</span></code> on hair systems this will export NPZ files that Charmorph will import.</p>
+<p>Hair must configured in the <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file</p>
+<p>an example would be</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">hair_library</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hair.blend</span>
+<span class="nt">hair_obj</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hair-src</span>
+<span class="nt">hairstyles</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Eve</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Back1</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bob</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Combover_zoro_d</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SceneHair_1_O4saken</span>
+</pre></div>
+</div>
 </section>
 <section id="rigging">
 <h2>Rigging<a class="headerlink" href="#rigging" title="Link to this heading"></a></h2>
@@ -297,7 +322,7 @@ You need to use “joint_” regular expression for exporting.</p>
 </section>
 <section id="config">
 <h2>Config<a class="headerlink" href="#config" title="Link to this heading"></a></h2>
-<p>Currently Charmorph has these configuration options documented.</p>
+<p>Currently Charmorph has these configuration options documented. List is non-exhaustive.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -345,7 +370,7 @@ You need to use “joint_” regular expression for exporting.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, Your Name.</p>
+    <p>&#169; Copyright 2024, Upliner.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

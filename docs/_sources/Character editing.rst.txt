@@ -1,6 +1,8 @@
 Character editing
 ==================
 
+This page is intended for developers and has a more exhaustive list of technical details than :doc:`Custom Characters`
+
 Base
 ------------
 Apart from character creating CharMorph also has editing tools
@@ -65,6 +67,30 @@ or ``Fantasy_No_Nose``
 Charmorph also has a UI Seperator to help keep things in the same category organized and less confusing to look at
 
 ``{ "separator": true},``
+
+Hair
+------------
+Currently Charmorph still uses Blender's old particle System.
+
+Hair is stored in two locations, in a blend file where either a proxy mesh or intended character mesh will store hair systems and externally in the ``hairstyles`` folder for each character.
+
+Use ``Export Hair`` or ``Export All Hair`` on hair systems this will export NPZ files that Charmorph will import.
+
+Hair must configured in the ``config.yaml`` file
+
+an example would be 
+
+.. code-block:: yaml
+
+    hair_library: hair.blend
+    hair_obj: hair-src
+    hairstyles:
+    - Eve
+    - Back1
+    - Bob
+    - Combover_zoro_d
+    - SceneHair_1_O4saken
+
 
 Rigging
 ------------
@@ -167,7 +193,7 @@ You need to use "joint\_" regular expression for exporting.
 
 Config
 ------------
-Currently Charmorph has these configuration options documented. 
+Currently Charmorph has these configuration options documented. List is non-exhaustive.
 
 +--------------------+---------------------------------------------------------------+------------+
 | Name               | Options                                                       | Required?  |
