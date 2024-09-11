@@ -8,7 +8,7 @@
     <style>
 
         .scroll-bg {
-            background: url('./assets/image.gif') no-repeat center;
+            background: url('./assets/side_eye.jpg') no-repeat center;
             background-size: cover;
             height: 50vh;
             position: relative;
@@ -26,97 +26,108 @@
             /* Changed from text-gray-200 to text-black */
             color: black;
         }
+
     </style>
 </head>
 <body class="font-sans text-gray-800">
 
     <!-- Header -->
-    <header class="bg-gray-100 p-6">
+    <header class="bg-[#262626] p-6">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-green-600">Charmorph Blender</h1>
+            <div class="flex flex-shrink-0 items-center">
+          <a href="./index.html">   
+          <img class="h-16 w-auto" src="./BlenderCharacterProject_Icon.svg" alt="Blender Character Project Logo">
+        </a>
+        <h1 class="text-2xl font-bold text-red-600"><a href="./index.html">Charmorph Blender</a></h1>
+        </div>
             <nav class="space-x-4">
-                <a href="#" class="text-gray-700 hover:text-green-600">Demo</a>
-                <a href="./about.html" class="text-gray-700 hover:text-green-600">About</a>
-                <a href="./docs/index.html" class="text-gray-700 hover:text-green-600">Docs</a>
+                <a href="#" class="text-gray-300 hover:text-red-600">Demo</a>
+                <a href="./about.html" class="text-gray-300 hover:text-red-600">About</a>
+                <a href="./docs/index.html" class="text-gray-300 hover:text-red-600">Docs</a>
             </nav>
-            <button onclick="window.location.href='download.html'" class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600">Download</button>
+            <button onclick="window.location.href='download.html'" class="bg-red-500 text-black px-6 py-2 rounded-full hover:bg-red-600">Download</button>
         </header>
 
     <!-- Hero Section with GIF background -->
-    <section class="scroll-bg" id="scrollBg">
+    <section class="scroll-bg bg-[#4a4a4a]" id="scrollBg">
         <div class="content">
-            <h2 class="text-4xl font-extrabold mt-4">Transform Your Blender Creations with Charmorph</h2>
-            <p class="text-black mt-4">Charmorph makes it easier than ever to create intricate 3D models with ease and precision.</p>
+            <h2 class="text-4xl font-extrabold mt-4 text-gray-300">Transform Your Blender Creations with Charmorph</h2>
+            <p class="mt-4 text-center">Charmorph makes it easier than ever to create intricate 3D models with ease and precision.</p>
             <div class="cta-buttons mt-8 flex justify-left space-x-4">
-                <button class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600" onclick="window.location.href='download.html'" >Download</button>
+                <button class="bg-red-500 text-black px-6 py-2 rounded-full hover:bg-red-600" onclick="window.location.href='download.html'" >Download</button>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-12 bg-[#262626]">
         <div class="container mx-auto text-center">
-            <h3 class="text-3xl font-semibold">Empowering Users with Intuitive Tools</h3>
-            <p class="mt-4 text-gray-600">Discover how Charmorph enhances your 3D modeling experience.</p>
+            <h3 class="text-3xl font-semibold text-gray-100">Empowering Users with Intuitive Tools</h3>
+            <p class="mt-4 text-gray-400">Discover how Charmorph enhances your 3D modeling experience.</p>
             <div class="mt-8 flex flex-col lg:flex-row justify-around space-y-8 lg:space-y-0">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-semibold text-green-600">Simple Interface</h4>
-                    <p class="text-gray-600 mt-2">Intuitive design makes 3D modeling straightforward and enjoyable.</p>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-red-600">Simple Interface</h4>
+                    <p class="text-gray-300 mt-2">Intuitive design makes 3D modeling straightforward and enjoyable.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-semibold text-green-600">Versatile Tools</h4>
-                    <p class="text-gray-600 mt-2">A wide range of tools to meet your specific needs.</p>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-red-600">Versatile Tools</h4>
+                    <p class="text-gray-300 mt-2">A wide range of tools to meet your specific needs.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h4 class="text-xl font-semibold text-green-600">Community Support</h4>
-                    <p class="text-gray-600 mt-2">Join a vibrant community of creators.</p>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-red-600">Community Support</h4>
+                    <p class="text-gray-300 mt-2">Join a vibrant community of creators.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Article Section -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-12 bg-[#262626]">
         <div class="container mx-auto text-center">
-            <h3 class="text-3xl font-semibold">Master Blender with CharMorph</h3>
-            <p class="mt-4 text-gray-600">Unveil new dimensions of creativity using CharMorph's dynamic features.</p>
+            <h3 class="text-3xl font-semibold text-gray-300">Master Blender with CharMorph</h3>
+            <p class="mt-4 text-gray-400">Unveil new dimensions of creativity using CharMorph's dynamic features.</p>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="article-image1.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
-                    <h4 class="text-xl font-semibold text-green-600">How Charmorph Simplifies 3D Modeling Tasks Quickly</h4>
-                    <p class="text-gray-600 mt-2">Learn how Charmorph can streamline your 3D modeling process.</p>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <img src="./assets/Couchpreview.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold text-red-600">How Charmorph Simplifies 3D Modeling Tasks Quickly</h4>
+                    <p class="text-gray-300 mt-2">Learn how Charmorph can streamline your 3D modeling process.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="article-image2.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
-                    <h4 class="text-xl font-semibold text-green-600">Maximize Blender's Potential with Charmorph Plugin</h4>
-                    <p class="text-gray-600 mt-2">Unfold the true potential of Blender with Charmorph.</p>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <img src="./assets/preview1.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold text-red-600">Maximize Blender's Potential with Charmorph Plugin</h4>
+                    <p class="text-gray-300 mt-2">Unfold the true potential of Blender with Charmorph.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="article-image3.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
-                    <h4 class="text-xl font-semibold text-green-600">The Evolution of Blender Plugins with Charmorph</h4>
-                    <p class="text-gray-600 mt-2">Explore the journey of Blender plugins and their impact.</p>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <img src="./assets/side_eye.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold text-red-600">The Evolution of Blender Plugins with Charmorph</h4>
+                    <p class="text-gray-300 mt-2">Explore the journey of Blender plugins and their impact.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-12 bg-green-500">
+    <section class="py-12 bg-red-500">
         <div class="container mx-auto text-center text-white">
             <h3 class="text-3xl font-semibold">Ready to Transform Your Blender Experience?</h3>
             <p class="mt-4">Get Charmorph today for free and witness the difference.</p>
             <div class="mt-6 flex justify-center">
-                <button class="bg-white text-green-600 px-6 py-2 rounded-full hover:bg-gray-200" onclick="window.location.href='download.html'">Download</button>
+                <button class="bg-white text-red-600 px-6 py-2 rounded-full hover:bg-gray-200" onclick="window.location.href='download.html'">Download</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-6 bg-gray-100">
+    <footer class="py-6 bg-[#262626]">
         <div class="container mx-auto flex justify-between items-center">
-            <p class="text-gray-600">© 2024 Charmorph Blender</p>
+            <p class="text-gray-300">© 2024 Charmorph Blender</p>
             <div class="flex space-x-4">
-                <a href= "mailto: contact@blendercharacterproject.org" class="text-gray-600 hover:text-green-600"> Contact Us </a>
+                <a href="https://github.com/Upliner/CharMorph">   
+                    <img class="h-8 w-auto" src="./github-mark.svg" alt="Github Repo Link Image">
+            </a>
+                  <a href="https://discord.gg/bMsvxN3jPY">   
+                    <img class="h-8 w-auto" src="./discord-mark.svg" alt="Discord Server Link Image">
+                </a>
             </div>
         </div>
     </footer>
