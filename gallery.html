@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gallery | Blender Character Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn ease-in 1;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .bg-animation {
+            background-image: url('https://images.unsplash.com/photo-1557682250-1340ab1d67a7');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 400px;
+            position: relative;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <header class="bg-[#262626] p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex flex-shrink-0 items-center">
+          <a href="./index.html">   
+          <img class="h-16 w-auto" src="./BlenderCharacterProject_Icon.svg" alt="Blender Character Project Logo">
+        </a>
+        <h1 class="text-2xl font-bold text-red-600"><a href="./index.html">CharMorph | Blender Character Project</a></h1>
+        </div>
+            <nav class="space-x-4">
+                <a href="./gallery.html" class="text-gray-300 hover:text-red-600">Gallery</a>
+                <a href="./about.html" class="text-gray-300 hover:text-red-600">About</a>
+                <a href="./docs/index.html" class="text-gray-300 hover:text-red-600">Docs</a>
+            </nav>
+            <button onclick="window.location.href='download.html'" class="bg-red-500 text-black px-6 py-2 rounded-full hover:bg-red-600">Download</button>
+        </header>
+
+    <!-- About Section -->
+    <section class="py-16 bg-[#262626]">
+            <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl font-extrabold mt-4 text-gray-300">What You Can Do</h2>
+            <p class="text-center mt-4 text-gray-400">See for yourselves what you can do with Charmorph!</p>
+        </div>
+        <div class="grid mt-8 grid-cols-2 md:grid-cols-3 gap-4">
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="./assets/EmoComposite.jpg" alt="Highly Composited Female Face with a goth aesthetic">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="./assets/SintelFaceCloseup.jpg" alt="Fanart of Sintel">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="./assets/Viewport.jpg" alt="Eye closeup with a custom scan">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="./assets/Faceminutiae.jpg" alt="Closeup of a Face with Vellus Hairs">
+            </div>
+            <div>
+                <img class="h-auto max-w-full rounded-lg" src="./assets/side_eye.jpg" alt="Closeup of a eye at a slight angle">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-red-500">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl font-semibold mb-3">Missing Something?</h2>
+            <p class="text-lg mb-8">Do you have an awesome art piece you want on the Website, please join our Discord and submit it!</p>
+            <a href="https://discord.gg/bMsvxN3jPYh" class="bg-white text-red-600 px-6 py-3 rounded-full hover:bg-gray-100">Join Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-[#262626]">
+        <div class="container mx-auto flex justify-between items-center">
+            <p class="text-gray-300">© 2024 CharMorph</p>
+            <div class="flex space-x-4">
+                <a href="https://github.com/Upliner/CharMorph">   
+                    <img class="h-8 w-auto" src="./github-mark.svg" alt="Github Repo Link Image">
+            </a>
+                  <a href="https://discord.gg/bMsvxN3jPY">   
+                    <img class="h-8 w-auto" src="./discord-mark.svg" alt="Discord Server Link Image">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

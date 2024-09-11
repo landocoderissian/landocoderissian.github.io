@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charmorph Blender</title>
+    <title>Charmorph | Blender Character Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
 
         .scroll-bg {
+            background: url('./assets/CloseupFlat.jpg') no-repeat center;
             background: url('./assets/image.gif') no-repeat center;
             background-size: cover;
             height: 50vh;
@@ -33,6 +34,16 @@
     <!-- Header -->
     <header class="bg-gray-100 p-6">
         <div class="container mx-auto flex justify-between items-center">
+            <div class="flex flex-shrink-0 items-center">
+          <a href="./index.html">   
+          <img class="h-16 w-auto" src="./BlenderCharacterProject_Icon.svg" alt="Blender Character Project Logo">
+        </a>
+        <h1 class="text-2xl font-bold text-red-600"><a href="./index.html">CharMorph | Blender Character Project</a></h1>
+        </div>
+            <nav class="space-x-4">
+                <a href="./gallery.html" class="text-gray-300 hover:text-red-600">Gallery</a>
+                <a href="./about.html" class="text-gray-300 hover:text-red-600">About</a>
+                <a href="./docs/index.html" class="text-gray-300 hover:text-red-600">Docs</a>
             <h1 class="text-2xl font-bold text-green-600">Charmorph Blender</h1>
             <nav class="space-x-4">
                 <a href="#" class="text-gray-700 hover:text-green-600">Demo</a>
@@ -43,6 +54,14 @@
         </header>
 
     <!-- Hero Section with GIF background -->
+    <section class="scroll-bg bg-[#4a4a4a]" id="scrollBg">
+        <div class="mx-auto bg flex flex-col items-center justify-center text-white h-5/6">
+            <h2 class="text-4xl font-extrabold text-gray-300">Transform Your Blender Creations with Charmorph</h2>
+            <p class="mt-4 text-center text-gray-300">
+                Charmorph makes it easier than ever to create realistic 3D Characters with ease and precision.
+            </p>
+            <div class="cta-buttons mt-8 flex justify-center space-x-4">
+                <button class="bg-red-500 text-black px-6 py-2 rounded-full hover:bg-red-600" onclick="window.location.href='download.html'">Download</button>
     <section class="scroll-bg" id="scrollBg">
         <div class="content">
             <h2 class="text-4xl font-extrabold mt-4">Transform Your Blender Creations with Charmorph</h2>
@@ -59,6 +78,9 @@
             <h3 class="text-3xl font-semibold">Empowering Users with Intuitive Tools</h3>
             <p class="mt-4 text-gray-600">Discover how Charmorph enhances your 3D modeling experience.</p>
             <div class="mt-8 flex flex-col lg:flex-row justify-around space-y-8 lg:space-y-0">
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <h4 class="text-xl font-semibold text-red-600">Straight to the Point.</h4>
+                    <p class="text-gray-300 mt-2">Intuitive design makes the character creation process straightforward and enjoyable.</p>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <h4 class="text-xl font-semibold text-green-600">Simple Interface</h4>
                     <p class="text-gray-600 mt-2">Intuitive design makes 3D modeling straightforward and enjoyable.</p>
@@ -81,6 +103,20 @@
             <h3 class="text-3xl font-semibold">Master Blender with CharMorph</h3>
             <p class="mt-4 text-gray-600">Unveil new dimensions of creativity using CharMorph's dynamic features.</p>
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <img src="./assets/Couchpreview.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold text-red-600">Charmorph Simplifies 3D Modeling Tasks Quickly</h4>
+                    <p class="text-gray-300 mt-2">Charmorph has feature rich characters that will reduce headaches when creating your next Character.</p>
+                </div>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <img src="./assets/preview1.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold text-red-600">Maximize Blender's Potential with Charmorph Plugin</h4>
+                    <p class="text-gray-300 mt-2">From topology bending character modeling to world class performance, you will always find something new in Charmorph! </p>
+                </div>
+                <div class="bg-[#4a4a4a] p-6 rounded-lg shadow-lg">
+                    <img src="./assets/side_eye.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
+                    <h4 class="text-xl font-semibold text-red-600">Fully FOSS</h4>
+                    <p class="text-gray-300 mt-2">Charmorph is 100% Free and Open Source. With no registration, hidden licenses or costs. </p>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <img src="article-image1.jpg" alt="Feature Image" class="rounded-t-lg mb-4">
                     <h4 class="text-xl font-semibold text-green-600">How Charmorph Simplifies 3D Modeling Tasks Quickly</h4>
@@ -114,6 +150,7 @@
     <!-- Footer -->
     <footer class="py-6 bg-gray-100">
         <div class="container mx-auto flex justify-between items-center">
+            <p class="text-gray-300">© 2024 CharMorph</p>
             <p class="text-gray-600">© 2024 Charmorph Blender</p>
             <div class="flex space-x-4">
                 <a href= "mailto: contact@blendercharacterproject.org" class="text-gray-600 hover:text-green-600"> Contact Us </a>
